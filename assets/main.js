@@ -1,15 +1,15 @@
 (function () {
   var G = window.GALLERY;
   var CATS = [
-    { key: 'yanjiao', period: '2025 – 2026', zh: '宝岛美食街', en: 'Treasure Island Food Street',
-      noteZh: '深圳市焰椒餐饮管理有限公司 · 台湾美食顾问', noteEn: 'Shenzhen Yanjiao Catering · Taiwan Cuisine Consultant' },
-    { key: 'ziyuan', period: '2011 – 2025', zh: '紫苑', en: 'Ziyuan',
+    { key: 'ziyuan', period: '2011 – 2025', zh: '紫苑 · 中西融合菜 / 粤菜', en: 'Ziyuan · Fusion / Cantonese',
       noteZh: '深圳紫苑文化发展有限公司 · 中西融合菜、粤菜、花胶鸡火锅', noteEn: 'Shenzhen Ziyuan Cultural Development · Fusion, Cantonese, fish-maw chicken hot pot' },
-    { key: 'beijing', period: '2009 – 2011', zh: '北京泰笛黛丝', en: 'Taste-tasty, Beijing',
+    { key: 'yanjiao', period: '2025 – 2026', zh: '宝岛美食街 · 台湾菜', en: 'Treasure Island Food Street · Taiwanese',
+      noteZh: '深圳市焰椒餐饮管理有限公司 · 台湾美食顾问', noteEn: 'Shenzhen Yanjiao Catering · Taiwan Cuisine Consultant' },
+    { key: 'beijing', period: '2009 – 2011', zh: '北京泰笛黛丝 · 轻食 / 西餐', en: 'Taste-tasty, Beijing · Light Food / Western',
       noteZh: '北京泰笛黛丝食品公司 · 行政总厨（轻食/西餐）', noteEn: 'Taste-tasty Western Restaurant, Beijing · Executive Chef (light food / Western)' },
-    { key: 'sheraton', period: '2003 – 2006', zh: '台北喜来登', en: 'Sheraton Taipei',
+    { key: 'sheraton', period: '2003 – 2006', zh: '台北喜来登 · 无国界料理 / 西餐', en: 'Sheraton Taipei · Global Fusion / Western',
       noteZh: '台北喜来登酒店 · 咖啡厅、无国界料理', noteEn: 'Sheraton Hotel Taipei · Coffee shop & global fusion cuisine' },
-    { key: 'others', period: '2002', zh: '其它', en: 'Others',
+    { key: 'others', period: '2002', zh: '其它 · 餐饮教学', en: 'Others · Culinary Teaching',
       noteZh: '2002 年兼任台北育达高级中学餐饮顾问教师', noteEn: '2002 · Culinary advisor-teacher, Yu Da High School, Taipei' }
   ];
 
@@ -30,7 +30,7 @@
   var tabsEl = document.getElementById('tabs');
   var gridEl = document.getElementById('grid');
   var noteEl = document.getElementById('tabNote');
-  var current = 'yanjiao';
+  var current = 'ziyuan';
 
   function lang() { return root.getAttribute('data-lang'); }
 
@@ -45,12 +45,6 @@
     img.onload = function () { img.classList.add('loaded'); };
     img.src = 'assets/img/' + item.src.replace('.jpg', '-t.jpg');
     b.appendChild(img);
-    if (item.cap) {
-      var c = document.createElement('span');
-      c.className = 'cap';
-      c.textContent = item.cap;
-      b.appendChild(c);
-    }
     b.addEventListener('click', function () { openLb(list, i); });
     return b;
   }

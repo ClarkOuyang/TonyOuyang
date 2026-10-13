@@ -139,10 +139,6 @@ html[data-lang="en"] body [lang="zh"] { display: none !important; }
 .tile img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease, opacity .4s; opacity: 0; }
 .tile img.loaded { opacity: 1; }
 .tile:hover img { transform: scale(1.04); }
-.tile .cap {
-  position: absolute; left: 0; right: 0; bottom: 0; padding: 28px 12px 10px; text-align: left;
-  background: linear-gradient(transparent, rgba(0, 0, 0, .7)); color: #fff; font-size: 13px; line-height: 1.4;
-}
 .grid.small .tile { aspect-ratio: 3 / 4; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.12); }
 .grid.small .tile img { object-fit: cover; object-position: top; }
 
