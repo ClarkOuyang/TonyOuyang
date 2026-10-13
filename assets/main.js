@@ -58,7 +58,7 @@
       t.setAttribute('role', 'tab');
       t.setAttribute('aria-selected', c.key === current ? 'true' : 'false');
       t.innerHTML = '<small></small>';
-      t.firstChild.textContent = c.period + ' · ' + G[c.key].length + (lang() === 'zh' ? ' 张' : ' photos');
+      t.firstChild.textContent = G[c.key].length + (lang() === 'zh' ? ' 张' : ' photos');
       t.insertBefore(document.createTextNode(lang() === 'zh' ? c.zh : c.en), t.firstChild);
       t.addEventListener('click', function () { current = c.key; renderTabs(); renderGrid(); });
       tabsEl.appendChild(t);
